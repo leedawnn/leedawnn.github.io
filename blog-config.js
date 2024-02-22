@@ -1,7 +1,7 @@
 module.exports = {
   title: "leedawn",
   description: "안녕하세요. 주니어 프론트엔드 개발자 이지혜입니다.",
-  author: "Hudi",
+  author: "leedawn",
   siteUrl: "https://devhudi.github.io/gatsby-starter-hoodie/",
   links: {
     github: "https://github.com/leedawnn",
