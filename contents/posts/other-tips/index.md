@@ -1,12 +1,12 @@
 ---
-title: "🤩 4. Other Tips"
+title: "🤩 Test!"
 description:
 date: 2021-05-04
 update: 2021-05-04
 tags:
-  - hoodie
-  - other-tips
-series: "Getting started your blog with gatsby-starter-hoodie"
+  - leedawnn
+  - test-tag
+series: "my first post"
 ---
 
 ## How to change the favicon?
@@ -26,3 +26,7 @@ Replace the `og-image.png` file in the `/static` directory with your own image f
 ## Do you have another question?
 
 Please comment on this article or [open an issue](https://github.com/devHudi/gatsby-starter-hoodie/issues) in the gatsby-starter-hoodie repository. Your participation advances gatsby-starter-hoodie. Thank you 😎.
+
+```js
+const a = 10
+```
