@@ -19,7 +19,7 @@ import {
   FaLink,
 } from "react-icons/fa6"
 
-import { description, author, links } from "../../../blog-config"
+import { siteUrl, description, author, links } from "../../../blog-config"
 
 const BioWrapper = styled.div`
   display: flex;
@@ -30,13 +30,18 @@ const BioWrapper = styled.div`
   }
 `
 
+const profileImageRoot =
+  typeof window !== "undefined" && window.location.host === "localhost:8000"
+    ? "http://localhost:8000"
+    : siteUrl
+
 const Profile = styled.div`
   flex: 0 0 auto;
   margin-right: 16px;
   width: 128px;
   height: 128px;
   border-radius: 999px;
-  background-image: "static/kkimi.jpg";
+  background-image: url(${profileImageRoot}/kkimi.jpg);
   background-size: cover;
   background-position: center;
 `
