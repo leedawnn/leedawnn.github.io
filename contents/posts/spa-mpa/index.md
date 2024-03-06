@@ -1,6 +1,6 @@
 ---
 title: "🤔 SPA vs MPA와 SSR vs CSR"
-description:
+description: SPA와 MAP 그리고 SSR과 CSR의 차이점
 date: 2024-03-05
 update: 2024-03-05
 tags:
