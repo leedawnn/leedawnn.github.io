@@ -7,6 +7,7 @@ tags:
   - react
   - pure function
   - components
+series: "react"
 ---
 
 ## 순수 함수란 무엇인가?
