@@ -406,7 +406,8 @@ throw문을 사용하면 특정 조건에서 커스텀 에러 메시지를 생�
 <span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
 <p>실패한 Promise에서 발생한 에러는 보통 에러와 마찬가지로 <code class="language-text">Promise.all</code>로 전파된다. 에러 때문에 생긴 예외는 <code class="language-text">try...catch</code>로 감싸 잡을 수 있다.</p>
 <h2>그래서 실무에서는 어떻게 써야해?</h2>
-<p>보통 <code class="language-text">axios</code>를 이용해서 API 요청을 보내고 받아온다. 아래는 GPT-4에게 try~catch문과 async/await를 적절하게 사용한 best practice 작성을 부탁한 코드다.</p>
+<p>보통 <code class="language-text">axios</code>를 이용해서 API 요청을 보내고 받아온다. 아래는 GPT-4에게 <code class="language-text">try~catch</code>문과<br>
+<code class="language-text">async/await</code>를 적절하게 사용한 best practice 작성을 부탁한 코드다.</p>
 <h3>1. 타입 정의</h3>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">ApiResponse</span> <span class="token punctuation">{</span>
   success<span class="token operator">:</span> <span class="token builtin">boolean</span>
