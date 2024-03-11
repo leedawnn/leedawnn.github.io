@@ -272,4 +272,61 @@ let results = await Promise.all([
 
 ## 그래서 실무에서는 어떻게 써야해?
 
-보통 `axios`를 이용해서 API 요청을 보내고 받아온다. 
+보통 `axios`를 이용해서 API 요청을 보내고 받아온다. 아래는 GPT-4에게 try~catch문과 async/await를 적절하게 사용한 best practice 작성을 부탁한 코드다.
+
+### 1. 타입 정의
+
+```ts
+interface ApiResponse {
+  success: boolean
+  data: any // 실제 응답 구조에 맞게 타입을 상세하게 정의
+}
+```
+
+### 2. Axios 인스턴스 생성
+
+```ts
+import axios from "axios"
+
+const client = axios.create({
+  baseURL: "https://api.example.com", // 보통 서버리스 함수 등으로 API 숨김. 여기선 skip
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+```
+
+### 3. API 요청 함수 작성
+
+```ts
+async function fetchSomeData(): Promise<ApiResponse> {
+  try {
+    const response = await client.get<ApiResponse>("/data")
+    return response.data
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      // Axios 에러 처리
+      console.error("Axios error:", error.response)
+    } else {
+      // 기타 에러 처리
+      console.error("Unexpected error:", error)
+    }
+    throw error
+  }
+}
+```
+
+### 4. 사용 예시
+
+```ts
+async function main() {
+  try {
+    const data = await fetchSomeData()
+    console.log(data)
+  } catch (error) {
+    console.error("Error fetching data:", error)
+  }
+}
+
+main()
+```
