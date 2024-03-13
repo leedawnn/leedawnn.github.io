@@ -272,7 +272,8 @@ let results = await Promise.all([
 
 ## 그래서 실무에서는 어떻게 써야해?
 
-보통 `axios`를 이용해서 API 요청을 보내고 받아온다. 아래는 GPT-4에게 try~catch문과 async/await를 적절하게 사용한 best practice 작성을 부탁한 코드다.
+보통 `axios`를 이용해서 API 요청을 보내고 받아온다. 아래는 GPT-4에게 `try~catch`문과  
+`async/await`를 적절하게 사용한 best practice 작성을 부탁한 코드다.
 
 ### 1. 타입 정의
 
