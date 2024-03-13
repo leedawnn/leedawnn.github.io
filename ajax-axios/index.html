@@ -245,7 +245,8 @@ xhr<span class="token punctuation">.</span><span class="token function">send</sp
   <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error: "</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
 <p>fetch는 첫번째 인자로 <code class="language-text">url</code>, 두번째 인자로 <code class="language-text">옵션 객체</code>를 받고, <code class="language-text">Promise</code> 타입의 객체를 반환한다. 반환된 객체는 API 호출이 성공했을 경우에는 응답(response) 객체를 <code class="language-text">resolve</code>하고, 실패했을 경우에는 예외(error) 객체를 <code class="language-text">reject</code>한다.</p>
 <h3>한계</h3>
-<p>Fetch API는 많은 개선점을 제공하지만, 여전히 몇 가지 한계가 있다. 예를 들어, Fetch는 요청 시간 초과(timeouts)를 직접적으로 지원하지 않는다. 또한 브라우저 호환성 문제와 일부 기능(진행 상태 추적 등)에 대한 제한이 있을 수 있다.</p>
+<p>Fetch API는 많은 개선점을 제공하지만, 여전히 몇 가지 한계가 있다.<br>
+예를 들어, Fetch는 요청 시간 초과(timeouts)를 직접적으로 지원하지 않는다. 또한 브라우저 호환성 문제와 일부 기능(진행 상태 추적 등)에 대한 제한이 있을 수 있다.</p>
 <h3>Axios의 등장 배경</h3>
 <p>Axios는 Fetch의 모든 장점을 가지면서도, Fetch의 한계를 극복하기 위해 등장했다. Axios는 요청 시간 초과 설정, 요청 취소, HTTP 상태 코드에 따른 자동 변환, 진행 상태 추적 등 추가적인 기능을 제공한다. 또한 브라우저뿐만 아니라 Node.js 환경에서도 사용할 수 있어서 서버 사이드와 클라이언트 사이드 모두 사용된다.</p>
 <h2>Axios</h2>
