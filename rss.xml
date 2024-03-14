@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of leedawn]]></title><description><![CDATA[안녕하세요. 주니어 프론트엔드 개발자 이지혜입니다.]]></description><link>https://leedawnn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Mar 2024 04:09:27 GMT</lastBuildDate><item><title><![CDATA[🦚 Ajax와 fetch, Axios는 어떻게 다를까?]]></title><description><![CDATA[Ajax (Asynchronous Javascript and XML) Ajax는 웹 페이지 전체를 다시 로딩하지 않고도, 웹 페이지의 일부분만을 갱신할 수 있다. 즉 Ajax…]]></description><link>https://leedawnn.github.io/ajax-axios/</link><guid isPermaLink="false">https://leedawnn.github.io/ajax-axios/</guid><pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax (Asynchronous Javascript and XML)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of leedawn]]></title><description><![CDATA[안녕하세요. 주니어 프론트엔드 개발자 이지혜입니다.]]></description><link>https://leedawnn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Mar 2024 04:13:31 GMT</lastBuildDate><item><title><![CDATA[🦚 Ajax와 fetch, Axios는 어떻게 다를까?]]></title><description><![CDATA[Ajax (Asynchronous Javascript and XML) Ajax는 웹 페이지 전체를 다시 로딩하지 않고도, 웹 페이지의 일부분만을 갱신할 수 있다. 즉 Ajax…]]></description><link>https://leedawnn.github.io/ajax-axios/</link><guid isPermaLink="false">https://leedawnn.github.io/ajax-axios/</guid><pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax (Asynchronous Javascript and XML)&lt;/h2&gt;
 &lt;p&gt;Ajax는 웹 페이지 전체를 다시 로딩하지 않고도, 웹 페이지의 일부분만을 갱신할 수 있다. 즉 Ajax를 이용하면 백그라운드 영역에서 서버와 통신하여, 그 결과를 웹페이지의 일부분만 표시 할 수 있다.&lt;/p&gt;
 &lt;h3&gt;동작 방식&lt;/h3&gt;
 &lt;p&gt;Ajax는 &lt;code class=&quot;language-text&quot;&gt;XMLHttpRequest&lt;/code&gt; 객체를 사용하여 서버와 통신한다. 이 객체를 통해 데이터를 비동기적으로 교환할 수 있으며, 페이지 전체를 새로고침하지 않고도 일부분만을 업데이트할 수 있다.&lt;/p&gt;
@@ -540,7 +540,7 @@ API 호출이 side effect이다.&lt;/p&gt;
 &lt;p&gt;자바스크립트에 대한 기초가 부족한 채로 SPA 프레임워크를 사용하여 프로젝트를 해오니 간단한 오류 하나 잡는 것에도 시간이 많이 들었다. 최신 기술 스택들을 따라가기 보다는 기초가 튼튼한 개발자가 되어야겠다고 마음을 먹고, okky를 통해서 스터디를 찾아 참여하게 되었다.&lt;/p&gt;
 &lt;h2&gt;스터디 진행&lt;/h2&gt;
 &lt;p align=&apos;center&apos;&gt;
-  &lt;img src=&apos;./../../assets/js-deep-dive.png&apos; width=&apos;400&apos;&gt;
+  &lt;img src=&apos;https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791158392239.jpg&apos; width=&apos;300&apos;&gt;
 &lt;/p&gt;
 &lt;p&gt;스터디는 게더타운에서 평일 밤 10시에 모여 진도에 맞는 챕터를 각자 1시간동안 읽고, 토론을 하는 식으로 진행했다. 보통 30분 정도 토론을 했고, 길어지면 12시를 넘기는 날도 있었다.&lt;/p&gt;
 &lt;p&gt;진도를 다 끝내는 데 2달 정도 걸렸다. 학생, 취준생, 현업자로 다양한 사람들로 구성되었다. &lt;del&gt;마지막엔 나 포함 2명밖에 남지 않았지만..&lt;/del&gt; 스터디 내내 개발 초보가 보는 관점과 현업에 계신 분의 관점이 이렇게 다르구나를 느낄 수 있었다. 역시 아는 만큼 보인다..!&lt;/p&gt;
@@ -548,6 +548,6 @@ API 호출이 side effect이다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/leedawnn/TIL/tree/main/Daily/2022_03&quot;&gt;3월 TIL&lt;/a&gt;, &lt;a href=&quot;https://github.com/leedawnn/TIL/tree/main/Daily/2022_04&quot;&gt;4월 TIL&lt;/a&gt;을 보면 스터디 내용을 확인할 수 있다. 😃&lt;/p&gt;
 &lt;h2&gt;회고&lt;/h2&gt;
 &lt;p align=&apos;center&apos;&gt;
-  &lt;img src=&apos;static/js-deep-dive-done.png&apos; width=&apos;400&apos;&gt;
+  &lt;img src=&apos;/js-deep-dive-done.png&apos; width=&apos;400&apos;&gt;
 &lt;/p&gt;
 &lt;p&gt;총 49 챕터, 900페이지가 넘어가는 배게 같은 책을 혼자 읽었다면 이렇게 재미있게 읽지 못했을 것 같다. 이해가 잘 가지 않아서 갑갑한 마음이 들 때면 현업에 계신 분들이 강의도 해주시고ㅋㅋ 면접 관련한 꿀팁들도 마구 쏟아내 주셔서 감사한 마음이 크다. 😊 특히, 마지막까지 함께 해주신 토니님께 넘나 감사드린다.. 이력서까지 공유해주시고, 취준 방향에 대해서도 많은 얘기를 해주셨다 ㅠㅠ 좋은 사람들과 행복한 스터디를 하고 나니 더 많은 것을 배우고 싶은 마음이 든다 ㅎㅎ&lt;/p&gt;</content:encoded></item></channel></rss>
