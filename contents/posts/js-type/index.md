@@ -1,5 +1,5 @@
 ---
-title: "🙌 값에 의한 전달(Pass by Value)와 참조에 의한 전달(Pass by Reference) "
+title: '🙌 값에 의한 전달(Pass by Value)와 참조에 의한 전달(Pass by Reference) '
 description: 자바스크립트에서 값에 의한 전달과 참조에 의한 전달 방식을 알아보자.
 date: 2024-03-21
 update: 2024-03-21
@@ -7,7 +7,7 @@ tags:
   - javascript
   - pass by value
   - pass by reference
-series: "javascript"
+series: 'javascript'
 ---
 
 알고리즘을 풀면서 아래와 같은 함수를 작성하여, 값을 변경하고 두 수의 위치를 바꾸려고 했다.
@@ -15,18 +15,18 @@ series: "javascript"
 ```js
 function changeNum(n1, n2) {
   if (n1 < n2) {
-    n1 = n2 + 1
+    n1 = n2 + 1;
   } else {
-    n2 = n1 + 1
+    n2 = n1 + 1;
   }
 }
 
-const arr = [2, 3, 9]
-let [a, b, c] = arr
+const arr = [2, 3, 9];
+let [a, b, c] = arr;
 
-changeNum(a, b)
+changeNum(a, b);
 
-console.log(arr) // [2, 3, 9]
+console.log(arr); // [2, 3, 9]
 ```
 
 하지만 의도와는 다르게 `changeNum`은 위치를 바꾸지 못하고 `arr`는 원본 그대로를 출력한다.
@@ -50,16 +50,16 @@ console.log(arr) // [2, 3, 9]
 ```js
 function changeNum(arr) {
   if (arr[0] < arr[1]) {
-    arr[0] = arr[1] + 1
+    arr[0] = arr[1] + 1;
   } else {
-    arr[1] = arr[0] + 1
+    arr[1] = arr[0] + 1;
   }
 }
 
-const arr = [2, 3, 9]
-changeNum(arr)
+const arr = [2, 3, 9];
+changeNum(arr);
 
-console.log(arr) // [4, 3, 9]
+console.log(arr); // [4, 3, 9]
 ```
 
 ## 값에 의한 전달(Pass by Value)
@@ -72,14 +72,14 @@ console.log(arr) // [4, 3, 9]
 
 ```js
 function modifyValue(x) {
-  x = 5
-  console.log("함수 내부: ", x) // 함수 내부: 5
+  x = 5;
+  console.log('함수 내부: ', x); // 함수 내부: 5
 }
 
-let a = 3
+let a = 3;
 
-modifyValue(a)
-console.log("함수 외부: ", a) // 함수 외부: 3
+modifyValue(a);
+console.log('함수 외부: ', a); // 함수 외부: 3
 ```
 
 ## 요약

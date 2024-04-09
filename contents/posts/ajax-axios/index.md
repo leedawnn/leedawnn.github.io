@@ -1,5 +1,5 @@
 ---
-title: "🦚 Ajax와 fetch, Axios는 어떻게 다를까?"
+title: '🦚 Ajax와 fetch, Axios는 어떻게 다를까?'
 description: Ajax와 Fetch, Axios의 기본 개념과 사용법에 대해 알아보자.
 date: 2024-03-13
 update: 2024-03-13
@@ -20,17 +20,17 @@ Ajax는 `XMLHttpRequest` 객체를 사용하여 서버와 통신한다. 이 객�
 ### 사용법
 
 ```js
-const xhr = new XMLHttpRequest() // XMLHttpRequest 객체 생성
+const xhr = new XMLHttpRequest(); // XMLHttpRequest 객체 생성
 
-xhr.open("GET", "url-to-the-server", true) // 요청 초기화 (HTTP 요청 메서드, 요청을 보낼 서버의 url, 비동기적으로 요청할 것인지 boolean)
+xhr.open('GET', 'url-to-the-server', true); // 요청 초기화 (HTTP 요청 메서드, 요청을 보낼 서버의 url, 비동기적으로 요청할 것인지 boolean)
 // 응답 처리 이벤트 핸들러 (xhr.readyState === 4는 요청 완료되었음을 나타냄)
 xhr.onreadystatechage = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
-    console.log(xhr.responseText) // 서버로부터 받은 데이터 처리
+    console.log(xhr.responseText); // 서버로부터 받은 데이터 처리
   }
-}
+};
 
-xhr.send() // 요청 전송
+xhr.send(); // 요청 전송
 ```
 
 ### 한계
@@ -49,8 +49,8 @@ Fetch API는 브라우저의 `window` 객체에 내장되어 있으며, `Request
 
 ```js
 fetch(url, options)
-  .then(response => console.log("response: ", response.json())) // JSON 데이터로 변환
-  .catch(error => console.log("error: ", error))
+  .then((response) => console.log('response: ', response.json())) // JSON 데이터로 변환
+  .catch((error) => console.log('error: ', error));
 ```
 
 fetch는 첫번째 인자로 `url`, 두번째 인자로 `옵션 객체`를 받고, `Promise` 타입의 객체를 반환한다. 반환된 객체는 API 호출이 성공했을 경우에는 응답(response) 객체를 `resolve`하고, 실패했을 경우에는 예외(error) 객체를 `reject`한다.
@@ -91,12 +91,12 @@ Fetch API와 비교했을 때 차이점을 좀 더 자세히 알아보자면, �
 ```js
 const fetchData = async () => {
   try {
-    const response = await axios.get("url-to-the-server")
-    console.log(response.data)
+    const response = await axios.get('url-to-the-server');
+    console.log(response.data);
   } catch (error) {
-    console.error("Error! : ", error)
+    console.error('Error! : ', error);
   }
-}
+};
 ```
 
 더 자세한 사용법을 알고싶다면, [**⚠️ 자바스크립트의 예외 처리**](https://leedawnn.github.io/error-handling/) 글을 참고!

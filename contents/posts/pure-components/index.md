@@ -1,5 +1,5 @@
 ---
-title: "🐳 React에서의 순수 컴포넌트"
+title: '🐳 React에서의 순수 컴포넌트'
 description: 컴포넌트 순수하게 유지하기
 date: 2024-03-04
 update: 2024-03-04
@@ -7,7 +7,7 @@ tags:
   - react
   - pure function
   - components
-series: "react"
+series: 'react'
 ---
 
 ## 순수 함수란 무엇인가?
@@ -34,12 +34,12 @@ React는 순수 함수를 중심으로 설계되었다. 모든 컴포넌트가 �
 다음 코드는 불순한 컴포넌트의 예시이다. 😒
 
 ```js
-let guest = 0
+let guest = 0;
 
 function Cup() {
   // Bad : 기존 변수를 변경합니다!
-  guest = guest + 1
-  return <h2>Tea cup for guest #{guest}</h2>
+  guest = guest + 1;
+  return <h2>Tea cup for guest #{guest}</h2>;
 }
 
 export default function TeaSet() {
@@ -49,7 +49,7 @@ export default function TeaSet() {
       <Cup />
       <Cup />
     </>
-  )
+  );
 }
 ```
 
@@ -59,7 +59,7 @@ export default function TeaSet() {
 
 ```js
 function Cup({ guest }) {
-  return <h2>Tea cup for guest #{guest}</h2>
+  return <h2>Tea cup for guest #{guest}</h2>;
 }
 
 export default function TeaSet() {
@@ -69,7 +69,7 @@ export default function TeaSet() {
       <Cup guest={2} />
       <Cup guest={3} />
     </>
-  )
+  );
 }
 ```
 
@@ -83,16 +83,16 @@ export default function TeaSet() {
 
 ```js
 function Cup({ guest }) {
-  return <h2>Tea cup for guest #{guest}</h2>
+  return <h2>Tea cup for guest #{guest}</h2>;
 }
 
 export default function TeaGathering() {
-  let cups = []
+  let cups = [];
   for (let i = 1; i < 12; i++) {
-    cups.push(<Cup key={i} guest={i} />)
+    cups.push(<Cup key={i} guest={i} />);
   }
 
-  return cups
+  return cups;
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "⚠️ 자바스크립트의 예외 처리"
+title: '⚠️ 자바스크립트의 예외 처리'
 description: try~catch문과 async/await가 필요한 이유에 대해 자세히 알아보자.
 date: 2024-03-07
 update: 2024-03-07
@@ -8,7 +8,7 @@ tags:
   - try~catch
   - async
   - await
-series: "javascript"
+series: 'javascript'
 ---
 
 자바스크립트에서 에러가 발생하면 스크립트는 죽고, 콘솔에 에러가 출력된다.  
@@ -46,10 +46,10 @@ try {
 ```js
 try {
   setTimeout(function () {
-    noSuchVariable // 스크립트는 여기서 죽는다.
-  }, 1000)
+    noSuchVariable; // 스크립트는 여기서 죽는다.
+  }, 1000);
 } catch (e) {
-  alert("작동 멈춤")
+  alert('작동 멈춤');
 }
 ```
 
@@ -59,11 +59,11 @@ try {
 ```js
 setTimeout(function () {
   try {
-    noSuchVariable // 이제 try...catch에서 에러를 핸들링 할 수 있다!
+    noSuchVariable; // 이제 try...catch에서 에러를 핸들링 할 수 있다!
   } catch {
-    alert("에러를 잡았습니다!")
+    alert('에러를 잡았습니다!');
   }
-}, 1000)
+}, 1000);
 ```
 
 ### 에러 객체
@@ -90,14 +90,14 @@ try {
 
 ```js
 try {
-  lalala // 에러, 변수가 정의되지 않음!
+  lalala; // 에러, 변수가 정의되지 않음!
 } catch (e) {
-  alert(e.name) // ReferenceError
-  alert(e.message) // lalala is not defined
+  alert(e.name); // ReferenceError
+  alert(e.message); // lalala is not defined
 
   // 에러 전체를 보여줄 수도 있다.
   // 이때, 에러 객체는 "name: message" 형태의 문자열로 변환된다.
-  alert(e) // ReferenceError: lalala is not defined
+  alert(e); // ReferenceError: lalala is not defined
 }
 ```
 
@@ -111,7 +111,7 @@ try {
 
 ```js
 if (!isValid) {
-  throw new Error("입력 값이 유효하지 않습니다.")
+  throw new Error('입력 값이 유효하지 않습니다.');
 }
 ```
 
@@ -121,14 +121,14 @@ if (!isValid) {
 ### 에러 다시 던지기
 
 ```js
-let json = '{ "age": 30 }' // 불완전한 데이터
+let json = '{ "age": 30 }'; // 불완전한 데이터
 
 try {
-  user = JSON.parse(json) // user 앞에 let을 붙이는 걸 잊음
+  user = JSON.parse(json); // user 앞에 let을 붙이는 걸 잊음
 
   // ...
 } catch (e) {
-  alert("JSON Error: " + e) // JSON Error: ReferenceError: user is not defined
+  alert('JSON Error: ' + e); // JSON Error: ReferenceError: user is not defined
   // 실제로는 JSON Error가 아님
 }
 ```
@@ -149,10 +149,10 @@ try {
 try {
   user = {
     /*...*/
-  }
+  };
 } catch (e) {
   if (e instanceof ReferenceError) {
-    alert("ReferenceError") // 정의되지 않은 변수에 접근하여 'ReferenceError' 발생
+    alert('ReferenceError'); // 정의되지 않은 변수에 접근하여 'ReferenceError' 발생
   }
 }
 ```
@@ -165,7 +165,7 @@ async와 await를 사용하면 Promise를 좀 더 편하게 사용할 수 있다
 
 ```js
 async function f() {
-  return 1
+  return 1;
 }
 ```
 
@@ -175,10 +175,10 @@ function 앞에 `async`를 붙이면 해당 함수는 항상 Promise를 반환�
 
 ```js
 async function f() {
-  return 1
+  return 1;
 }
 
-f().then(alert) // 1
+f().then(alert); // 1
 ```
 
 `async`가 붙은 함수는 반드시 Promise를 반환하고, Promise가 아닌 것은 Promise로 감싸 반환한다. 또다른 키워드 `await`는 `async` 함수 안에서만 동작한다.
@@ -187,7 +187,7 @@ f().then(alert) // 1
 
 ```js
 // await는 async 함수 안에서만 동작한다.
-let value = await promise
+let value = await promise;
 ```
 
 자바스크립트는 `await` 키워드를 만나면 Promise가 처리될 때까지 기다린다. 결과는 그 이후 반환된다.
@@ -197,12 +197,12 @@ let value = await promise
 ```js
 async function f() {
   let promise = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("완료!"), 1000)
-  })
+    setTimeout(() => resolve('완료!'), 1000);
+  });
 
-  let result = await promise // Promise가 이행될 때까지 기다림
+  let result = await promise; // Promise가 이행될 때까지 기다림
 
-  alert(result) // 완료!
+  alert(result); // 완료!
 }
 ```
 
@@ -219,12 +219,12 @@ Promise가 정상적으로 이행되면 `await promise`는 Promise 객체의 res
 
 ```js
 async function f() {
-  await Promise.reject(new Error("에러 발생!"))
+  await Promise.reject(new Error('에러 발생!'));
 }
 
 // 위 코드는 아래 코드와 동일하다.
 async function f() {
-  throw new Error("에러 발생!")
+  throw new Error('에러 발생!');
 }
 ```
 
@@ -235,24 +235,24 @@ await가 던진 에러는 throw가 던진 에러를 잡을 때처럼 `try...catc
 ```js
 async function f() {
   try {
-    let response = await fetch("http://유효하지-않은-주소")
+    let response = await fetch('http://유효하지-않은-주소');
   } catch (e) {
-    alert(e) // TypeError: failed to fetch
+    alert(e); // TypeError: failed to fetch
   }
 }
 
-f()
+f();
 ```
 
 `try...catch`가 없으면 아래 예시의 async 함수 `f()`를 호출해 만든 Promise가 거부 상태가 된다. `f()`에 `.catch`를 추가하면 거부된 Promise를 처리할 수 있다.
 
 ```js
 async function f() {
-  let response = await fetch("http://유효하지-않은-주소")
+  let response = await fetch('http://유효하지-않은-주소');
 }
 
 // f()는 거부 상태의 프라미스가 된다.
-f().catch(alert) // TypeError: failed to fetch
+f().catch(alert); // TypeError: failed to fetch
 ```
 
 ### async/await는 Promise.all과도 함께 쓸 수 있다.
@@ -279,22 +279,22 @@ let results = await Promise.all([
 
 ```ts
 interface ApiResponse {
-  success: boolean
-  data: any // 실제 응답 구조에 맞게 타입을 상세하게 정의
+  success: boolean;
+  data: any; // 실제 응답 구조에 맞게 타입을 상세하게 정의
 }
 ```
 
 ### 2. Axios 인스턴스 생성
 
 ```ts
-import axios from "axios"
+import axios from 'axios';
 
 const client = axios.create({
-  baseURL: "https://api.example.com", // 보통 서버리스 함수 등으로 API 숨김. 여기선 skip
+  baseURL: 'https://api.example.com', // 보통 서버리스 함수 등으로 API 숨김. 여기선 skip
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
-})
+});
 ```
 
 ### 3. API 요청 함수 작성
@@ -302,17 +302,17 @@ const client = axios.create({
 ```ts
 async function fetchSomeData(): Promise<ApiResponse> {
   try {
-    const response = await client.get<ApiResponse>("/data")
-    return response.data
+    const response = await client.get<ApiResponse>('/data');
+    return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       // Axios 에러 처리
-      console.error("Axios error:", error.response)
+      console.error('Axios error:', error.response);
     } else {
       // 기타 에러 처리
-      console.error("Unexpected error:", error)
+      console.error('Unexpected error:', error);
     }
-    throw error
+    throw error;
   }
 }
 ```
@@ -322,12 +322,12 @@ async function fetchSomeData(): Promise<ApiResponse> {
 ```ts
 async function main() {
   try {
-    const data = await fetchSomeData()
-    console.log(data)
+    const data = await fetchSomeData();
+    console.log(data);
   } catch (error) {
-    console.error("Error fetching data:", error)
+    console.error('Error fetching data:', error);
   }
 }
 
-main()
+main();
 ```
